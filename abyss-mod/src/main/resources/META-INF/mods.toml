@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+[[mods]]
+modId="theabyss"
+version="0.1.0"
+displayName="THE ABYSS"
+authors="Dead Air Project"
+description='''A survival horror experience: the darkness notices you.'''
+[[dependencies.theabyss]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.theabyss]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"
