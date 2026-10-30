@@ -17,13 +17,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Gradle
+      - name: Set up Gradle 8.1.1
         uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.1.1'
 
       - name: Build mod
         working-directory: DeadAir-Forge-1.20.1-GitHub-Build/dead-air
