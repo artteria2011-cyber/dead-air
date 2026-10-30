@@ -1,0 +1,8 @@
+plugins { id 'eclipse'; id 'idea'; id 'net.minecraftforge.gradle' version '[6.0,6.2)' }
+version = '0.1.0'
+group = 'com.theabyss'
+base { archivesName = 'the-abyss' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+minecraft { mappings channel: 'official', version: '1.20.1'; runs { configureEach { workingDirectory project.file('run'); property 'forge.logging.console.level', 'info'; mods { theabyss { source sourceSets.main } } }; client {}; server { args '--nogui' } } }
+repositories { mavenCentral() }
+dependencies { minecraft 'net.minecraftforge:forge:1.20.1-47.3.0' }
