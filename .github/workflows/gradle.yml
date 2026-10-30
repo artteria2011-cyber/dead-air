@@ -1,3 +1,4 @@
+
 name: Build Dead Air
 
 on:
@@ -10,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,11 +26,12 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build mod
+        working-directory: DeadAir-Forge-1.20.1-GitHub-Build/dead-air
         run: gradle build
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: DeadAir-Forge-1.20.1
-          path: build/libs/*.jar
+          path: DeadAir-Forge-1.20.1-GitHub-Build/dead-air/build/libs/*.jar
           if-no-files-found: error
